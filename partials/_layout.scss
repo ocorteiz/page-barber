@@ -1,0 +1,296 @@
+/* IMAGEM DE FUNDO */
+
+.bg-header {
+    position: relative;
+}
+
+.bg-header::before {
+    content: '';
+    display: block;
+    position: absolute;
+    background-image: linear-gradient(to bottom, #06121e1a, $primary-normal), url(../images/bg.svg);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* MAIN */
+
+main {
+    margin-top: 4em;
+    color: $white-normal;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 4em 2em 0em 2em;
+}
+
+main h1 {
+    max-width: 600px;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+main p {
+    margin-bottom: 2em;
+}
+
+main a {
+    color: $white-ligth;
+    text-transform: uppercase;
+    padding: 1em 2em;
+    background-color: $red-dark;
+    border-radius: 5px;
+    opacity: .85;
+    transition: .3s;
+}
+
+main a:hover {
+    opacity: 1;
+}
+
+@media screen and (max-width:768px) {
+
+    main h1 {
+        font-size: 1.5em;
+    }
+
+    main p {
+        font-size: .7em;
+    }
+
+}
+
+/* ABOUT */
+
+.about {
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+    gap: 5em;
+    background-color: $primary-normal;
+    overflow: hidden;
+    color: $white-normal;
+    margin: 80px 40px;
+
+    div {
+        flex: 1;
+    }
+}
+
+.about .image {
+    max-width: 640px;
+
+    img {
+        width: 100%;
+    }
+}
+
+.about .text {
+    max-width: 600px;
+
+    h2 {
+        font-size: 2em;
+        margin-bottom: 1em;
+    }
+
+    p {
+        line-height: 1.5em;
+        margin-bottom: 2em;
+    }
+}
+
+@media screen and (max-width:768px) {
+    
+    .about {
+        flex-direction: column;
+        text-align: justify;
+        gap: 2em;
+    }
+
+}
+
+/* SERVICES */
+
+.services {
+    display: flex;
+    flex-direction: column;
+    background-color: $white-normal;
+    padding: 80px 40px 40px 40px;
+}
+
+.services .text {
+    text-align: center;
+    margin: 0 auto;
+
+    h2 {
+        text-transform: uppercase;
+        font-size: 3em;
+        margin-bottom: 1em;
+    }
+
+    p {
+        max-width: 740px;
+        margin-bottom: 3em;
+    }
+}
+
+.haircuts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.haircut {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 10px -2px #00000067;
+    border-radius: 10px;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        max-width: 354px;
+        cursor: pointer;
+        transition: transform .3s;
+  
+    }
+}
+
+.haircut img:hover {
+    transform: scale(1.1);
+    z-index: 1;
+}
+
+.haircut-info {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px;
+    z-index: 99;
+    background-color: $white-normal;
+
+    button {
+        background-color: $red-normal;
+        padding: .5em;
+        border: none;
+        border-radius: 5px;
+        opacity: .9;
+    }
+
+    button:hover {
+        opacity: 1;
+    }
+}
+
+.map {
+    margin-top: 5em;
+    text-align: center;
+    font-size: 1.5em;
+    text-transform: uppercase;
+}
+
+@media screen and (max-width:768px) {
+    
+    .haircuts {
+        flex-direction: column;
+    }
+
+    .services {
+        padding: 40px 40px;
+    }
+
+    .services .text {
+        h2 {
+            margin-bottom: .5em;
+        }
+    }
+
+}
+
+/* LOCALE */
+
+iframe {
+    width: 100%;
+}
+
+@media screen and (max-width:768px) {
+    
+    iframe {
+        width: 100%;
+        height: 300px;
+    }
+
+}
+
+/* FOOTER */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: $white-normal;
+    padding: 40px 40px 20px 20px;
+    text-align: center;
+
+    i {
+        color: $white-normal;
+ 
+    }
+
+    img {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        width: 140px;
+    }
+}
+
+.whatsapp {
+    width: 70px;
+    position: fixed;
+    bottom: 14px;
+    right: 24px;
+    z-index: 99;
+    cursor: pointer;
+
+    img {
+        transition: tranform .3s;
+    }
+
+    img:hover {
+        transform: scale(1.1);
+    }
+}
+
+.whatsapp span {
+    visibility: hidden;
+    position: absolute;
+    width: 120px;
+    left: -130px;
+    top: 10px;
+    background-color: $black-ligth;
+    color: $white-normal;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.whatsapp:hover span {
+    visibility: visible;
+}
+
+@media screen and (max-width:768px) {
+
+    .whatsapp {
+        width: 60px;
+    }
+
+    .whatsapp span {
+        top: 5; 
+        font-size: .9em; 
+    }
+}
